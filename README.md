@@ -163,6 +163,14 @@ The AI assistant that builds with you. Generate code, manage tasks, and explore 
 
 The gold standard for AI search. Get cited answers to your questions in real-time.
 
+### [T3.chat](https://t3.chat/)
+
+**Company:** 🇺🇸 Theo - t3․gg  
+**Model:** Multi-model  
+**Tags:** `Chat`  
+
+Access to AI models from Google, OpenAI, Anthropic, DeepSeek, and more. Free tier available.
+
 ### [Yupp](https://yupp.ai/)
 
 **Company:** 🇺🇸 Yupp  
@@ -351,6 +359,14 @@ Competitive coding benchmark and arena for the latest programming models.
 
 Seattle based non-profit AI research institute founded in 2014 by the late Paul Allen.
 
+### [Arcee](https://chat.arcee.ai)
+
+**Company:** 🇺🇸 Arcee AI  
+**Model:** Trinity  
+**Tags:** `Chat`  
+
+Arcee AI: A US-based Open Intelligence Lab.
+
 ### [Falcon](https://chat.falconllm.tii.ae/anonymous-chat)
 
 **Company:** 🇦🇪 TII  
@@ -359,13 +375,21 @@ Seattle based non-profit AI research institute founded in 2014 by the late Paul 
 
 Technology Innovation Institute (TII) is a UAE-based research institute.
 
-### [Hugging Face](https://huggingface.co)
+### [Hugging Face](https://huggingface.co/models)
 
 **Company:** 🇺🇸 Hugging Face  
 **Model:** HuggingChat  
 **Tags:** `Chat` `Open Source`  
 
 The platform where the machine learning community collaborates on models, datasets, and applications.
+
+### [Jan](https://jan.ai)
+
+**Company:** Menlo  
+**Model:** Jan  
+**Tags:** `Chat`  
+
+Menlo is a global R&D lab building open-source AI with offices in Singapore and Vietnam
 
 ### [Nous](https://chat.nousresearch.com/)
 
@@ -398,4 +422,4 @@ Compute expert-level answers using Wolfram’s breakthrough, algorithms, knowled
 This is a community-maintained list of free AI tools and chatbots. All services listed offer free tiers or are completely free to use.
 
 **Last Updated:** 2026-02-03  
-**Total Entries:** 41
+**Total Entries:** 44
