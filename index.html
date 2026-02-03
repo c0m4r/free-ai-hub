@@ -382,6 +382,16 @@
                 height: 40px;
                 font-size: 1.1rem;
             }
+
+            .badge {
+                display: none;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .badge-model {
+                display: none !important;
+            }
         }
 
         @keyframes fadeIn {
@@ -429,7 +439,7 @@
             font-size: 1.6rem;
             font-weight: 800;
             color: var(--text-main);
-            margin: 3rem 0 1rem 0;
+            margin: 2.5rem 0 0.5rem 0;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--accent-glow);
             display: flex;
@@ -443,7 +453,7 @@
             color: var(--text-muted);
             font-size: 0.98rem;
             line-height: 1.5;
-            margin: -0.25rem 0 1.5rem 0;
+            margin: -1.5rem 0 0.5rem 0;
         }
 
         .grid>.section-header:first-child {
@@ -1094,12 +1104,12 @@
                                         <div class="ai-icon-container ${isThemeAware ? 'theme-aware' : ''}">${iconHtml}</div>
                                         ${ai.name}
                                     </div>
-                                    <div class="ai-company">by ${formatCompany(ai.company)}</div>
                                 </div>
                                 <span class="badge badge-model">${ai.model}</span>
                             </div>
                             <div class="tags">${tagsHtml}</div>
                             <p class="description">${ai.desc}</p>
+                            <div class="ai-company">by ${formatCompany(ai.company)}</div>
                         `;
                         grid.appendChild(card);
                     });
