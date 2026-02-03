@@ -6,12 +6,12 @@ Demo: https://free-ai-hub.github-30d.workers.dev/
 
 ## Table of Contents
 
-- [🤖 Chatbots — Official](#-chatbots-official)
-- [🤖 Chatbots — Multi-model](#-chatbots-multi-model)
-- [🤖 Chatbots — Local](#-chatbots-local)
+- [🤖 Chatbots — Official](#-chatbots--official)
+- [🤖 Chatbots — Multi-model](#-chatbots--multi-model)
+- [🤖 Chatbots — Local](#-chatbots--local)
 - [💻 Agentic Coding (IDEs)](#-agentic-coding-ides)
-- [🖼️ Text-to-Image AI — Online](#-text-to-image-ai-online)
-- [🖼️ Text-to-Image AI — Local](#-text-to-image-ai-local)
+- [🖼️ Text-to-Image AI — Online](#%EF%B8%8F-text-to-image-ai--online)
+- [🖼️ Text-to-Image AI — Local](#%EF%B8%8F-text-to-image-ai--local)
 - [🏆 Leaderboards](#-leaderboards)
 - [🤖 Other](#-other)
 
