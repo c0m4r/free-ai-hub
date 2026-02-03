@@ -108,9 +108,11 @@
             position: fixed;
             bottom: 1.5rem;
             right: 1.5rem;
+            width: 44px;
+            height: 44px;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            padding: 0.75rem;
+            padding: 0;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
@@ -120,6 +122,7 @@
             box-shadow: var(--shadow-soft);
             backdrop-filter: blur(10px);
             z-index: 300;
+            transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.3s ease;
         }
 
         .theme-toggle:hover {
@@ -372,8 +375,12 @@
             }
 
             .theme-toggle {
-                top: 0;
-                right: 0;
+                bottom: auto;
+                top: 1rem;
+                right: 1rem;
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
             }
         }
 
@@ -447,11 +454,12 @@
 
 <body>
 
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+
     <header>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-            <span class="sun-icon">☀️</span>
-            <span class="moon-icon">🌙</span>
-        </button>
         <h1>Free AI Hub</h1>
         <p class="subtitle">A curated list of free AI chatbots and tools.</p>
     </header>
@@ -857,6 +865,16 @@
                 url: "https://playground.allenai.org/"
             },
             {
+                name: "Arcee",
+                category: "other",
+                svg: `<img alt="Nous" src="icons/arcee.jpg" style="width: 32px; height: 32px;" />`,
+                company: "Arcee AI",
+                model: "Trinity",
+                desc: "Arcee AI: A US-based Open Intelligence Lab.",
+                tags: ["Chat"],
+                url: "https://chat.arcee.ai"
+            },
+            {
                 name: "Falcon",
                 category: "other",
                 svg: `<img alt="Falcon" src="icons/tii.png" style="width: 32px; height: 32px;" />`,
@@ -916,6 +934,7 @@
             "Alibaba Cloud": "🇨🇳",
             "Anthropic": "🇺🇸",
             "Anysphere": "🇺🇸",
+            "Arcee AI": "🇺🇸",
             "Artificial Analysis": "🇬🇧",
             "Baidu": "🇨🇳",
             "ByteDance": "🇨🇳",
