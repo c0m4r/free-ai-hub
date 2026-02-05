@@ -459,6 +459,50 @@
         .grid>.section-header:first-child {
             margin-top: 0;
         }
+
+        /* Video Cards Styling */
+        .card-video {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            padding: 1.8rem 2rem;
+            background: linear-gradient(135deg, var(--card-bg), rgba(15, 118, 110, 0.03));
+            border-left: 4px solid var(--accent-color);
+            text-align: left;
+        }
+
+        .card-video .ai-name {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .card-video .description {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .video-play-icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            opacity: 0.15;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--accent-color);
+        }
+
+        .card-video:hover .video-play-icon {
+            opacity: 0.7;
+            transform: translateY(-50%) scale(1.15);
+        }
+
+        [data-theme="dark"] .card-video {
+            background: linear-gradient(135deg, var(--card-bg), rgba(20, 184, 166, 0.05));
+        }
     </style>
 </head>
 
@@ -524,8 +568,8 @@
                 svg: `<svg height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><title>OpenAI</title><path d="M21.55 10.004a5.416 5.416 0 00-.478-4.501c-1.217-2.09-3.662-3.166-6.05-2.66A5.59 5.59 0 0010.831 1C8.39.995 6.224 2.546 5.473 4.838A5.553 5.553 0 001.76 7.496a5.487 5.487 0 00.691 6.5 5.416 5.416 0 00.477 4.502c1.217 2.09 3.662 3.165 6.05 2.66A5.586 5.586 0 0013.168 23c2.443.006 4.61-1.546 5.361-3.84a5.553 5.553 0 003.715-2.66 5.488 5.488 0 00-.693-6.497v.001zm-8.381 11.558a4.199 4.199 0 01-2.675-.954c.034-.018.093-.05.132-.074l4.44-2.53a.71.71 0 00.364-.623v-6.176l1.877 1.069c.02.01.033.029.036.05v5.115c-.003 2.274-1.87 4.118-4.174 4.123zM4.192 17.78a4.059 4.059 0 01-.498-2.763c.032.02.09.055.131.078l4.44 2.53c.225.13.504.13.73 0l5.42-3.088v2.138a.068.068 0 01-.027.057L9.9 19.288c-1.999 1.136-4.552.46-5.707-1.51h-.001zM3.023 8.216A4.15 4.15 0 015.198 6.41l-.002.151v5.06a.711.711 0 00.364.624l5.42 3.087-1.876 1.07a.067.067 0 01-.063.005l-4.489-2.559c-1.995-1.14-2.679-3.658-1.53-5.63h.001zm15.417 3.54l-5.42-3.088L14.896 7.6a.067.067 0 01.063-.006l4.489 2.557c1.998 1.14 2.683 3.662 1.529 5.633a4.163 4.163 0 01-2.174 1.807V12.38a.71.71 0 00-.363-.623zm1.867-2.773a6.04 6.04 0 00-.132-.078l-4.44-2.53a.731.731 0 00-.729 0l-5.42 3.088V7.325a.068.068 0 01.027-.057L14.1 4.713c2-1.137 4.555-.46 5.707 1.513.487.833.664 1.809.499 2.757h.001zm-11.741 3.81l-1.877-1.068a.065.065 0 01-.036-.051V6.559c.001-2.277 1.873-4.122 4.181-4.12.976 0 1.92.338 2.671.954-.034.018-.092.05-.131.073l-4.44 2.53a.71.71 0 00-.365.623l-.003 6.173v.002zm1.02-2.168L12 9.25l2.414 1.375v2.75L12 14.75l-2.415-1.375v-2.75z"></path></svg>`,
                 company: "OpenAI",
                 model: "GPT-5",
-                desc: "The next frontier in AI. GPT-5 offers unprecedented reasoning, creativity, and multimodal capabilities.",
-                tags: ["Chat", "Image", "Websearch"],
+                desc: "It's a must-have on the list, although I don't recommend using ClosedAI products. Oh, and it shows ads...",
+                tags: ["Chat", "Image", "Websearch", "Research"],
                 url: "https://chatgpt.com"
             },
             {
@@ -534,7 +578,7 @@
                 svg: `<svg height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><title>Claude</title><path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z" fill="#D97757" fill-rule="nonzero"></path></svg>`,
                 company: "Anthropic",
                 model: "Claude 4.5",
-                desc: "The best AI model for coding.",
+                desc: "The best AI model for coding (so far). Follows the principle of \"do one thing and do it well.\"",
                 tags: ["Coding"],
                 url: "https://claude.ai"
             },
@@ -544,7 +588,7 @@
                 svg: `<svg height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><title>Copilot</title><path d="M17.533 1.829A2.528 2.528 0 0015.11 0h-.737a2.531 2.531 0 00-2.484 2.087l-1.263 6.937.314-1.08a2.528 2.528 0 012.424-1.833h4.284l1.797.706 1.731-.706h-.505a2.528 2.528 0 01-2.423-1.829l-.715-2.453z" fill="url(#lobe-icons-copilot-fill-0)" transform="translate(0 1)"></path><path d="M6.726 20.16A2.528 2.528 0 009.152 22h1.566c1.37 0 2.49-1.1 2.525-2.48l.17-6.69-.357 1.228a2.528 2.528 0 01-2.423 1.83h-4.32l-1.54-.842-1.667.843h.497c1.124 0 2.113.75 2.426 1.84l.697 2.432z" fill="url(#lobe-icons-copilot-fill-1)" transform="translate(0 1)"></path><path d="M15 0H6.252c-2.5 0-4 3.331-5 6.662-1.184 3.947-2.734 9.225 1.75 9.225H6.78c1.13 0 2.12-.753 2.43-1.847.657-2.317 1.809-6.359 2.713-9.436.46-1.563.842-2.906 1.43-3.742A1.97 1.97 0 0115 0" fill="url(#lobe-icons-copilot-fill-2)" transform="translate(0 1)"></path><path d="M15 0H6.252c-2.5 0-4 3.331-5 6.662-1.184 3.947-2.734 9.225 1.75 9.225H6.78c1.13 0 2.12-.753 2.43-1.847.657-2.317 1.809-6.359 2.713-9.436.46-1.563.842-2.906 1.43-3.742A1.97 1.97 0 0115 0" fill="url(#lobe-icons-copilot-fill-3)" transform="translate(0 1)"></path><path d="M9 22h8.749c2.5 0 4-3.332 5-6.663 1.184-3.948 2.734-9.227-1.75-9.227H17.22c-1.129 0-2.12.754-2.43 1.848a1149.2 1149.2 0 01-2.713 9.437c-.46 1.564-.842 2.907-1.43 3.743A1.97 1.97 0 019 22" fill="url(#lobe-icons-copilot-fill-4)" transform="translate(0 1)"></path><path d="M9 22h8.749c2.5 0 4-3.332 5-6.663 1.184-3.948 2.734-9.227-1.75-9.227H17.22c-1.129 0-2.12.754-2.43 1.848a1149.2 1149.2 0 01-2.713 9.437c-.46 1.564-.842 2.907-1.43 3.743A1.97 1.97 0 019 22" fill="url(#lobe-icons-copilot-fill-5)" transform="translate(0 1)"></path><defs><radialGradient cx="85.44%" cy="100.653%" fx="85.44%" fy="100.653%" gradientTransform="scale(-.8553 -1) rotate(50.927 2.041 -1.946)" id="lobe-icons-copilot-fill-0" r="105.116%"><stop offset="9.6%" stop-color="#00AEFF"></stop><stop offset="77.3%" stop-color="#2253CE"></stop><stop offset="100%" stop-color="#0736C4"></stop></radialGradient><radialGradient cx="18.143%" cy="32.928%" fx="18.143%" fy="32.928%" gradientTransform="scale(.8897 1) rotate(52.069 .193 .352)" id="lobe-icons-copilot-fill-1" r="95.612%"><stop offset="0%" stop-color="#FFB657"></stop><stop offset="63.4%" stop-color="#FF5F3D"></stop><stop offset="92.3%" stop-color="#C02B3C"></stop></radialGradient><radialGradient cx="82.987%" cy="-9.792%" fx="82.987%" fy="-9.792%" gradientTransform="scale(-1 -.9441) rotate(-70.872 .142 1.17)" id="lobe-icons-copilot-fill-4" r="140.622%"><stop offset="6.6%" stop-color="#8C48FF"></stop><stop offset="50%" stop-color="#F2598A"></stop><stop offset="89.6%" stop-color="#FFB152"></stop></radialGradient><linearGradient id="lobe-icons-copilot-fill-2" x1="39.465%" x2="46.884%" y1="12.117%" y2="103.774%"><stop offset="15.6%" stop-color="#0D91E1"></stop><stop offset="48.7%" stop-color="#52B471"></stop><stop offset="65.2%" stop-color="#98BD42"></stop><stop offset="93.7%" stop-color="#FFC800"></stop></linearGradient><linearGradient id="lobe-icons-copilot-fill-3" x1="45.949%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#3DCBFF"></stop><stop offset="24.7%" stop-color="#0588F7" stop-opacity="0"></stop></linearGradient><linearGradient id="lobe-icons-copilot-fill-5" x1="83.507%" x2="83.453%" y1="-6.106%" y2="21.131%"><stop offset="5.8%" stop-color="#F8ADFA"></stop><stop offset="70.8%" stop-color="#A86EDD" stop-opacity="0"></stop></linearGradient></defs></svg>`,
                 company: "Microsoft",
                 model: "GPT-5",
-                desc: "Microsoft's AI assistant, now powered by the latest GPT-5 model. Integrated with web search and Windows.",
+                desc: "Microsoft's AI assistant powered by OpenAI models. Integrated with web search and Windows (ugh).",
                 tags: ["Images", "Search", "General"],
                 url: "https://copilot.microsoft.com"
             },
@@ -557,6 +601,16 @@
                 desc: "High-performance open-source disruptor. Rivaling top proprietary models in logic, math, and coding.",
                 tags: ["Coding", "Math", "Open Source"],
                 url: "https://chat.deepseek.com"
+            },
+            {
+                name: "DesignArena",
+                category: "chat",
+                svg: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="29" viewBox="0 0 38 35"><path d="M1.02711 12.6324C2.74395 12.7648 4.17083 13.4436 4.98398 14.6739C5.30598 15.1611 5.50996 15.7029 5.60542 16.281C5.74931 15.715 5.99837 15.1941 6.35905 14.7371C7.27265 13.5796 8.75122 13.0232 10.4731 13.0354C10.8849 14.7071 10.6872 16.2746 9.7737 17.4321C8.97297 18.4465 7.73816 18.9988 6.28606 19.1117L5.47718 19.1052L5.4762 19.1075L4.68936 19.0391C3.25173 18.8047 2.06759 18.1503 1.35489 17.072C0.541896 15.842 0.476317 14.2636 1.02711 12.6324Z"></path><path d="M10.4411 5.14604C11.135 3.96974 11.1208 2.50661 10.5342 1.02375C8.9523 1.2274 7.66463 1.92256 6.97061 3.099C6.35497 4.14259 6.29722 5.4117 6.70157 6.72027L6.88084 7.19303L7.44957 7.12321C8.76834 6.83842 9.83277 6.17716 10.4411 5.14604Z"></path><path d="M2.41646 4.78198C4.03549 5.36833 5.22911 6.4037 5.68397 7.80647C5.86408 8.362 5.91585 8.93869 5.85338 9.52124C6.14327 9.01429 6.52245 8.5789 6.99214 8.23487C8.18181 7.36354 9.7553 7.22243 11.4113 7.69431C11.3615 9.41527 10.7521 10.873 9.56253 11.7442C8.51985 12.5078 7.18235 12.7101 5.7529 12.4308L4.97516 12.2085L4.9736 12.2104L4.23364 11.9343C2.91092 11.3243 1.9447 10.3772 1.54603 9.14775C1.09128 7.74516 1.44983 6.20666 2.41646 4.78198Z"></path><path d="M1.99161 21.1846C3.63223 20.6617 5.20963 20.7541 6.4257 21.5883C6.90728 21.9186 7.30006 22.344 7.60588 22.8438C7.52639 22.2652 7.56129 21.6889 7.72365 21.1298C8.13492 19.7137 9.29573 18.6421 10.8958 18.006C11.906 19.4001 12.3123 20.9269 11.9011 22.3429C11.5406 23.584 10.6041 24.5601 9.30099 25.2107L8.54904 25.5089L8.54899 25.5114L7.7942 25.7439C6.37395 26.0673 5.03063 25.9062 3.96478 25.1751C2.7489 24.341 2.09461 22.9031 1.99161 21.1846Z"></path><path d="M36.3586 12.6324C34.6418 12.7648 33.2149 13.4436 32.4018 14.6739C32.0798 15.1611 31.8758 15.7029 31.7803 16.281C31.6364 15.715 31.3874 15.1941 31.0267 14.7371C30.1131 13.5796 28.6345 13.0232 26.9127 13.0354C26.5008 14.7071 26.6986 16.2746 27.612 17.4321C28.4128 18.4465 29.6476 18.9988 31.0997 19.1117L31.9086 19.1052L31.9095 19.1075L32.6964 19.0391C34.134 18.8047 35.3182 18.1503 36.0309 17.072C36.8438 15.842 36.9094 14.2636 36.3586 12.6324Z"></path><path d="M26.9447 5.14604C26.2507 3.96974 26.2649 2.50661 26.8516 1.02375C28.4334 1.2274 29.7211 1.92256 30.4151 3.099C31.0308 4.14259 31.0885 5.4117 30.6842 6.72027L30.5049 7.19303L29.9362 7.12321C28.6174 6.83842 27.553 6.17716 26.9447 5.14604Z"></path><path d="M34.9693 4.78198C33.3503 5.36833 32.1566 6.4037 31.7018 7.80647C31.5217 8.362 31.4699 8.93869 31.5324 9.52124C31.2425 9.01429 30.8633 8.5789 30.3936 8.23487C29.2039 7.36354 27.6304 7.22243 25.9745 7.69431C26.0243 9.41527 26.6337 10.873 27.8232 11.7442C28.8659 12.5078 30.2034 12.7101 31.6328 12.4308L32.4106 12.2085L32.4121 12.2104L33.1521 11.9343C34.4748 11.3243 35.441 10.3772 35.8397 9.14775C36.2945 7.74516 35.9359 6.20666 34.9693 4.78198Z"></path><path d="M35.3941 21.1846C33.7535 20.6617 32.1761 20.7541 30.96 21.5883C30.4785 21.9186 30.0857 22.344 29.7799 22.8438C29.8594 22.2652 29.8245 21.6889 29.6621 21.1298C29.2508 19.7137 28.09 18.6421 26.4899 18.006C25.4797 19.4001 25.0735 20.9269 25.4847 22.3429C25.8452 23.584 26.7817 24.5601 28.0848 25.2107L28.8367 25.5089L28.8367 25.5114L29.5915 25.7439C31.0118 26.0673 32.3551 25.9062 33.421 25.1751C34.6368 24.341 35.2911 22.9031 35.3941 21.1846Z"></path><path d="M23.9586 20.9385C24.9474 22.3482 25.3299 23.881 24.8968 25.2906C24.7258 25.8471 24.439 26.348 24.0552 26.7881C24.585 26.5381 25.1468 26.3981 25.7306 26.3861C27.205 26.3559 28.5746 27.1438 29.6594 28.481C28.6304 29.8613 27.2943 30.7049 25.8202 30.7352C24.7896 30.7563 23.8108 30.3769 22.9443 29.69C22.6455 29.4531 22.2261 29.4117 21.911 29.6264C19.6236 31.1845 17.3082 32.6663 14.9361 34.1082C14.6813 34.2623 14.3496 34.1697 14.2098 33.9068C13.9733 33.4622 13.7367 33.0176 13.5002 32.573C13.3636 32.3161 13.4702 31.9973 13.7331 31.8728C16.1684 30.7106 18.599 29.4813 20.9791 28.1911C21.2217 28.0596 21.309 27.7548 21.1739 27.5142C21.0469 27.296 21.0023 27.1985 20.9052 26.9769C20.4423 25.92 20.4253 25.0345 20.739 24.0132C21.1721 22.6038 22.3491 21.5498 23.9586 20.9385Z"></path><path d="M13.427 20.9385C15.0365 21.5498 16.2139 22.6038 16.647 24.0132C16.9435 24.9786 16.8562 26.0012 16.4544 27.0028C16.2898 27.413 16.423 27.8988 16.8113 28.1099C19.2387 29.4298 21.7199 30.6864 24.2059 31.8728C24.4686 31.9972 24.5751 32.316 24.4386 32.5727C24.2021 33.0174 23.9656 33.4621 23.7292 33.9068C23.5893 34.1697 23.2577 34.2623 23.0029 34.1082C20.4366 32.5482 17.9363 30.942 15.4665 29.2424C15.2838 29.1167 15.0369 29.1411 14.8829 29.3007C14.7955 29.3943 14.6942 29.4815 14.5902 29.5694C13.6877 30.3326 12.6551 30.7575 11.5654 30.7352C10.0913 30.7048 8.75551 29.8613 7.72656 28.481C8.81134 27.1438 10.1811 26.3559 11.6554 26.3861C12.2392 26.3982 12.801 26.5381 13.3308 26.7881C12.9469 26.348 12.6598 25.8471 12.4888 25.2906C12.0557 23.881 12.4382 22.3482 13.427 20.9385Z"></path></svg>`,
+                company: "DesignArena",
+                model: "Multi-Model",
+                desc: "Join voters to discover which AI is the best at design.",
+                tags: ["Chat", "Design"],
+                url: "https://www.designarena.ai"
             },
             {
                 name: "Duck AI",
@@ -647,6 +701,26 @@
                 desc: "The premier European AI. Efficient, powerful, and available through their 'Le Chat' interface.",
                 tags: ["Coding", "Multilingual", "Privacy"],
                 url: "https://chat.mistral.ai"
+            },
+            {
+                name: "OpenRouter",
+                svg: `<svg height="64" style="flex:none;line-height:1" viewBox="0 0 24 24" width="64" xmlns="http://www.w3.org/2000/svg"><title>OpenRouter</title><path d="M16.804 1.957l7.22 4.105v.087L16.73 10.21l.017-2.117-.821-.03c-1.059-.028-1.611.002-2.268.11-1.064.175-2.038.577-3.147 1.352L8.345 11.03c-.284.195-.495.336-.68.455l-.515.322-.397.234.385.23.53.338c.476.314 1.17.796 2.701 1.866 1.11.775 2.083 1.177 3.147 1.352l.3.045c.694.091 1.375.094 2.825.033l.022-2.159 7.22 4.105v.087L16.589 22l.014-1.862-.635.022c-1.386.042-2.137.002-3.138-.162-1.694-.28-3.26-.926-4.881-2.059l-2.158-1.5a21.997 21.997 0 00-.755-.498l-.467-.28a55.927 55.927 0 00-.76-.43C2.908 14.73.563 14.116 0 14.116V9.888l.14.004c.564-.007 2.91-.622 3.809-1.124l1.016-.58.438-.274c.428-.28 1.072-.726 2.686-1.853 1.621-1.133 3.186-1.78 4.881-2.059 1.152-.19 1.974-.213 3.814-.138l.02-1.907z"></path></svg>`,
+                category: "chat",
+                company: "OpenRouter",
+                model: "Multi-model",
+                desc: "Based on real usage data from millions of users accessing models through OpenRouter.",
+                tags: ["Chat"],
+                url: "https://openrouter.ai"
+            },
+            {
+                name: "Open WebUI",
+                category: "chat",
+                svg: `<img src="icons/oi.png" alt="Open WebUI" width="32" height="32">`,
+                company: "Open WebUI",
+                model: "Multi-model",
+                desc: "Self-hosted AI platform designed to operate entirely offline. It supports various LLM runners like Ollama and OpenAI-compatible APIs.",
+                tags: ["Chat", "Open-source", "Self-hosted"],
+                url: "https://github.com/open-webui/open-webui"
             },
             {
                 name: "Perplexity",
@@ -822,6 +896,47 @@
                 tags: ["IDE", "Vibe coding"],
                 url: "https://antigravity.google/download"
             },
+            // AI-powered CLI coding tools
+            {
+                name: "Aider",
+                svg: `<img alt="Aider" src="icons/aider.png" style="width: 32px; height: 32px;" />`,
+                category: "cli",
+                company: "Aider",
+                model: "Multi-model",
+                desc: "Aider lets you pair program with LLMs to start a new project or build on your existing codebase.",
+                tags: ["CLI", "GIT", "Coding", "Ollama", "Open source"],
+                url: "https://aider.chat/docs/llms/ollama.html"
+            },
+            {
+                name: "Cline",
+                svg: `<img alt="Cline" src="icons/cline.png" style="width: 32px; height: 32px;" />`,
+                category: "cli",
+                company: "Cline",
+                model: "Multi-model",
+                desc: "The Open Coding Agent. Transform your engineering team with a fully collaborative AI partner. Open source, fully extensible, and built to amplify developer impact.",
+                tags: ["CLI", "Coding", "Ollama", "Open source"],
+                url: "https://docs.cline.bot/running-models-locally/ollama"
+            },
+            {
+                name: "Kilo Code",
+                svg: `<img alt="Kilo Code" src="icons/kilo.png" style="width: 32px; height: 32px;" />`,
+                category: "cli",
+                company: "Kilo Code",
+                model: "Multi-model",
+                desc: "Move at Kilo Speed. Build, ship, and iterate faster with the most popular open source coding agent.",
+                tags: ["CLI", "Coding", "Ollama", "Open source"],
+                url: "https://kilo.ai/docs/ai-providers/ollama"
+            },
+            {
+                name: "Warp",
+                svg: `<svg class="h-auto" height="32" viewBox="0 0 101 83" xmlns="http://www.w3.org/2000/svg"><path d="M51.0696 0.921936H88.7341C94.8309 0.921936 99.7736 6.02928 99.7736 12.3295V56.6175C99.7736 62.9179 94.8309 68.0252 88.7341 68.0252H34.835L51.0696 0.921936Z"></path><path d="M41.2866 13.6346H10.9455C4.90046 13.6346 0 18.7419 0 25.0421V69.3302C0 75.6305 4.90046 80.7378 10.9455 80.7378H48.2888L49.7863 74.495H26.6878L41.2866 13.6346Z"></path></svg>`,
+                category: "cli",
+                company: "Warp",
+                model: "Multi-model",
+                desc: "Run a team of agents — from Warp’s SOTA agent to Claude Code, Codex, and Gemini CLI — all from the terminal.",
+                tags: ["CLI", "Coding", "Ollama"],
+                url: "https://www.warp.dev/university/developer-workflows/how-to-setup-ollama-using-warp"
+            },
             // AI Leaderboards
             {
                 name: "LiveBench",
@@ -854,14 +969,14 @@
                 url: "https://artificialanalysis.ai/leaderboards/models"
             },
             {
-                name: "SWE-bench",
-                svg: `<img alt="SWE-bench" src="icons/swebench.svg" style="width: 32px; height: 32px;" />`,
+                name: "OpenRouter",
+                svg: `<svg height="64" style="flex:none;line-height:1" viewBox="0 0 24 24" width="64" xmlns="http://www.w3.org/2000/svg"><title>OpenRouter</title><path d="M16.804 1.957l7.22 4.105v.087L16.73 10.21l.017-2.117-.821-.03c-1.059-.028-1.611.002-2.268.11-1.064.175-2.038.577-3.147 1.352L8.345 11.03c-.284.195-.495.336-.68.455l-.515.322-.397.234.385.23.53.338c.476.314 1.17.796 2.701 1.866 1.11.775 2.083 1.177 3.147 1.352l.3.045c.694.091 1.375.094 2.825.033l.022-2.159 7.22 4.105v.087L16.589 22l.014-1.862-.635.022c-1.386.042-2.137.002-3.138-.162-1.694-.28-3.26-.926-4.881-2.059l-2.158-1.5a21.997 21.997 0 00-.755-.498l-.467-.28a55.927 55.927 0 00-.76-.43C2.908 14.73.563 14.116 0 14.116V9.888l.14.004c.564-.007 2.91-.622 3.809-1.124l1.016-.58.438-.274c.428-.28 1.072-.726 2.686-1.853 1.621-1.133 3.186-1.78 4.881-2.059 1.152-.19 1.974-.213 3.814-.138l.02-1.907z"></path></svg>`,
                 category: "leaderboard",
-                company: "Princeton NLP",
+                company: "OpenRouter",
                 model: "Benchmark",
-                desc: "A benchmark for evaluating LLMs on their ability to solve real-world software issues.",
-                tags: ["Software Engineering", "Coding"],
-                url: "https://www.swebench.com/"
+                desc: "Based on real usage data from millions of users accessing models through OpenRouter.",
+                tags: ["Analytics", "Usage"],
+                url: "https://openrouter.ai/rankings"
             },
             {
                 name: "CodeClash",
@@ -872,6 +987,16 @@
                 desc: "Competitive coding benchmark and arena for the latest programming models.",
                 tags: ["Coding", "Comparison"],
                 url: "https://codeclash.ai/"
+            },
+            {
+                name: "SWE-bench",
+                svg: `<img alt="SWE-bench" src="icons/swebench.svg" style="width: 32px; height: 32px;" />`,
+                category: "leaderboard",
+                company: "Princeton NLP",
+                model: "Benchmark",
+                desc: "A benchmark for evaluating LLMs on their ability to solve real-world software issues.",
+                tags: ["Software Engineering", "Coding"],
+                url: "https://www.swebench.com/"
             },
             // Other
             {
@@ -925,6 +1050,16 @@
                 url: "https://jan.ai"
             },
             {
+                name: "Liquid",
+                category: "other",
+                svg: `<img alt="Liquid" src="icons/liquid.png" style="width: 32px; height: 32px;" />`,
+                company: "Liquid AI",
+                model: "Liquid",
+                desc: "Liquid AI, an MIT spin-off, is a foundation model company headquartered in Boston, Massachusetts.",
+                tags: ["Chat"],
+                url: "https://playground.liquid.ai/"
+            },
+            {
                 name: "Nous",
                 category: "other",
                 svg: `<img alt="Nous" src="icons/nous.png" style="width: 32px; height: 32px;" />`,
@@ -953,6 +1088,43 @@
                 desc: "Compute expert-level answers using Wolfram’s breakthrough, algorithms, knowledgebase and AI technology.",
                 tags: ["Math"],
                 url: "https://www.wolframalpha.com/"
+            },
+            // Videos
+            {
+                name: "Interview with Geoffrey Hinton",
+                category: "video",
+                desc: "The Nobel Prize-winning godfather of AI",
+                url: "https://www.youtube.com/watch?v=giT0ytynSqg"
+            },
+            {
+                name: "Interview with Yoshua Bengio",
+                category: "video",
+                desc: "Turing Prize winner. A pioneer of artificial neural networks and deep learning.",
+                url: "https://www.youtube.com/watch?v=zQ1POHiR8m8"
+            },
+            {
+                name: "Interview with Ilya Sutskever",
+                category: "video",
+                desc: "Ilya is considered to have played a key role in the development of ChatGPT.",
+                url: "https://www.youtube.com/watch?v=aR20FWCCjAs"
+            },
+            {
+                name: "Interview with Roman Yampolskiy",
+                category: "video",
+                desc: "Roman Yampolskiy is a computer scientist mostly known for his work on AI safety and cybersecurity.",
+                url: "https://www.youtube.com/watch?v=UclrVWafRAI"
+            },
+            {
+                name: "The Thinking Game",
+                category: "video",
+                desc: "A journey into the heart of leading AI lab DeepMind, capturing a team striving to unravel the mysteries of intelligence and life itself.",
+                url: "https://www.youtube.com/watch?v=d95J8yzvjbQ"
+            },
+            {
+                name: "Interview with Eliezer Yudkowsky",
+                category: "video",
+                desc: "Eliezer Yudkowsky is a leading AI researcher and author discussing AI safety.",
+                url: "https://www.youtube.com/watch?v=AaTRHFaaPG8"
             },
         ];
 
@@ -1010,7 +1182,7 @@
         function renderCards(filter = "") {
             grid.innerHTML = "";
             const lowerFilter = filter.toLowerCase();
-            const themeAwareModels = ["Arena", "ChatGPT", "Grok", "Kimi", "Ollama", "Perplexity", "Windsurf", "Z.ai"];
+            const themeAwareModels = ["Arena", "ChatGPT", "DesignArena", "Grok", "Kimi", "Ollama", "OpenRouter", "Perplexity", "Warp", "Windsurf", "Z.ai"];
 
             const sections = {
                 chatOfficial: {
@@ -1041,6 +1213,13 @@
                     desc: "IDE experiences with built‑in agents, autocomplete, and coding workflows.",
                     items: []
                 },
+                cli: {
+                    id: "cli-tools",
+                    title: "CLI tools",
+                    icon: "💻",
+                    desc: "CLI tools for AI-powered coding.",
+                    items: []
+                },
                 onlineGen: {
                     id: "online-tti",
                     title: "Text-to-image AI - Online",
@@ -1067,6 +1246,13 @@
                     title: "Other",
                     icon: "🤖",
                     desc: "Exotic chatbots with smaller models and other AI powered tools.",
+                    items: []
+                },
+                video: {
+                    id: "knowledge-is-free",
+                    title: "Knowledge is also free",
+                    icon: "📺",
+                    desc: "Curated interviews and debates about the future of Artificial Intelligence.",
                     items: []
                 }
             };
@@ -1114,24 +1300,35 @@
                         card.target = "_blank";
                         card.style.setProperty('--i', index);
 
-                        const tagsHtml = (ai.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('');
-                        const iconHtml = ai.svg || placeholderSvg;
-                        const isThemeAware = themeAwareModels.includes(ai.name);
-
-                        card.innerHTML = `
-                            <div class="card-header">
-                                <div class="ai-name-wrapper">
-                                    <div class="ai-name">
-                                        <div class="ai-icon-container ${isThemeAware ? 'theme-aware' : ''}">${iconHtml}</div>
-                                        ${ai.name}
-                                    </div>
+                        if (section.id === "knowledge-is-free") {
+                            card.className = 'card card-video';
+                            card.innerHTML = `
+                                <div class="video-play-icon">▶</div>
+                                <div class="card-content">
+                                    <div class="ai-name">${ai.name}</div>
+                                    <p class="description">${ai.desc}</p>
                                 </div>
-                                <span class="badge badge-model">${ai.model}</span>
-                            </div>
-                            <div class="tags">${tagsHtml}</div>
-                            <p class="description">${ai.desc}</p>
-                            <div class="ai-company">by ${formatCompany(ai.company)}</div>
-                        `;
+                            `;
+                        } else {
+                            const tagsHtml = (ai.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('');
+                            const iconHtml = ai.svg || placeholderSvg;
+                            const isThemeAware = themeAwareModels.includes(ai.name);
+
+                            card.innerHTML = `
+                                <div class="card-header">
+                                    <div class="ai-name-wrapper">
+                                        <div class="ai-name">
+                                            <div class="ai-icon-container ${isThemeAware ? 'theme-aware' : ''}">${iconHtml}</div>
+                                            ${ai.name}
+                                        </div>
+                                    </div>
+                                    <span class="badge badge-model">${ai.model}</span>
+                                </div>
+                                <div class="tags">${tagsHtml}</div>
+                                <p class="description">${ai.desc}</p>
+                                <div class="ai-company">by ${formatCompany(ai.company)}</div>
+                            `;
+                        }
                         grid.appendChild(card);
                     });
                 }
